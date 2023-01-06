@@ -22,6 +22,7 @@ import product5 from './product5.jpg';
 import product6 from './product6.jpg';
 import product7 from './product7.jpg';
 import product8 from './product8.jpg';
+import { generateRandomString } from '../utils/generateRandomString';
 
 export const gridOrderImage = (props) => (
   <div>
@@ -44,22 +45,30 @@ export const gridOrderStatus = (props) => (
 );
 
 export const kanbanGrid = [
-  { headerText: 'To Do',
+  {
+    headerText: 'To Do',
     keyField: 'Open',
-    allowToggle: true },
+    allowToggle: true
+  },
 
-  { headerText: 'In Progress',
+  {
+    headerText: 'In Progress',
     keyField: 'InProgress',
-    allowToggle: true },
+    allowToggle: true
+  },
 
-  { headerText: 'Testing',
+  {
+    headerText: 'Testing',
     keyField: 'Testing',
     allowToggle: true,
-    isExpanded: false },
+    isExpanded: false
+  },
 
-  { headerText: 'Done',
+  {
+    headerText: 'Done',
     keyField: 'Close',
-    allowToggle: true },
+    allowToggle: true
+  },
 ];
 const gridEmployeeProfile = (props) => (
   <div className="flex items-center gap-2">
@@ -323,20 +332,26 @@ export const colorMappingData = [
 ];
 
 export const rangeColorMapping = [
-  { label: '1°C to 10°C',
+  {
+    label: '1°C to 10°C',
     start: '1',
     end: '10',
-    colors: colorMappingData[1] },
+    colors: colorMappingData[1]
+  },
 
-  { label: '11°C to 20°C',
+  {
+    label: '11°C to 20°C',
     start: '11',
     end: '20',
-    colors: colorMappingData[2] },
+    colors: colorMappingData[2]
+  },
 
-  { label: '21°C to 30°C',
+  {
+    label: '21°C to 30°C',
     start: '21',
     end: '30',
-    colors: colorMappingData[3] },
+    colors: colorMappingData[3]
+  },
 
 ];
 
@@ -393,38 +408,50 @@ export const LinePrimaryYAxis = {
 
 export const customersGrid = [
   { type: 'checkbox', width: '50' },
-  { headerText: 'Name',
+  {
+    headerText: 'Name',
     width: '150',
     template: customerGridImage,
-    textAlign: 'Center' },
-  { field: 'ProjectName',
+    textAlign: 'Center'
+  },
+  {
+    field: 'ProjectName',
     headerText: 'Project Name',
     width: '150',
-    textAlign: 'Center' },
-  { field: 'Status',
+    textAlign: 'Center'
+  },
+  {
+    field: 'Status',
     headerText: 'Status',
     width: '130',
     format: 'yMd',
     textAlign: 'Center',
-    template: customerGridStatus },
+    template: customerGridStatus
+  },
   {
     field: 'Weeks',
     headerText: 'Weeks',
     width: '100',
     format: 'C2',
-    textAlign: 'Center' },
-  { field: 'Budget',
+    textAlign: 'Center'
+  },
+  {
+    field: 'Budget',
     headerText: 'Budget',
     width: '100',
     format: 'yMd',
-    textAlign: 'Center' },
+    textAlign: 'Center'
+  },
 
-  { field: 'Location',
+  {
+    field: 'Location',
     headerText: 'Location',
     width: '150',
-    textAlign: 'Center' },
+    textAlign: 'Center'
+  },
 
-  { field: 'CustomerID',
+  {
+    field: 'CustomerID',
     headerText: 'Customer ID',
     width: '120',
     textAlign: 'Center',
@@ -434,39 +461,51 @@ export const customersGrid = [
 ];
 
 export const employeesGrid = [
-  { headerText: 'Employee',
+  {
+    headerText: 'Employee',
     width: '150',
     template: gridEmployeeProfile,
-    textAlign: 'Center' },
-  { field: 'Name',
+    textAlign: 'Center'
+  },
+  {
+    field: 'Name',
     headerText: '',
     width: '0',
     textAlign: 'Center',
   },
-  { field: 'Title',
+  {
+    field: 'Title',
     headerText: 'Designation',
     width: '170',
     textAlign: 'Center',
   },
-  { headerText: 'Country',
+  {
+    headerText: 'Country',
     width: '120',
     textAlign: 'Center',
-    template: gridEmployeeCountry },
+    template: gridEmployeeCountry
+  },
 
-  { field: 'HireDate',
+  {
+    field: 'HireDate',
     headerText: 'Hire Date',
     width: '135',
     format: 'yMd',
-    textAlign: 'Center' },
+    textAlign: 'Center'
+  },
 
-  { field: 'ReportsTo',
+  {
+    field: 'ReportsTo',
     headerText: 'Reports To',
     width: '120',
-    textAlign: 'Center' },
-  { field: 'EmployeeID',
+    textAlign: 'Center'
+  },
+  {
+    field: 'EmployeeID',
     headerText: 'Employee ID',
     width: '125',
-    textAlign: 'Center' },
+    textAlign: 'Center'
+  },
 ];
 
 export const links = [
@@ -884,7 +923,8 @@ export const ordersGrid = [
     editType: 'dropdownedit',
     textAlign: 'Center',
   },
-  { field: 'CustomerName',
+  {
+    field: 'CustomerName',
     headerText: 'Customer Name',
     width: '150',
     textAlign: 'Center',
@@ -1483,17 +1523,17 @@ export const customersData = [
 
 export const employeesData = [
   {
-    EmployeeID: 1,
+    EmployeeID: generateRandomString(),
     Name: 'Nancy Davolio',
     Title: 'Sales Representative',
     HireDate: '01/02/2021',
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-    avatar3,
+      avatar3,
   },
   {
-    EmployeeID: 2,
+    EmployeeID: generateRandomString(),
     Name: 'Nasimiyu Danai',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
@@ -1503,7 +1543,7 @@ export const employeesData = [
       avatar3,
   },
   {
-    EmployeeID: 3,
+    EmployeeID: generateRandomString(),
     Name: 'Iulia Albu',
     Title: 'HR',
     HireDate: '01/02/2021',
@@ -1513,7 +1553,7 @@ export const employeesData = [
       avatar4,
   },
   {
-    EmployeeID: 4,
+    EmployeeID: generateRandomString(),
     Name: 'Siegbert Gottfried',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
@@ -1523,7 +1563,7 @@ export const employeesData = [
       avatar2,
   },
   {
-    EmployeeID: 5,
+    EmployeeID: generateRandomString(),
     Name: 'Omar Darobe',
     Title: 'HR',
     HireDate: '01/02/2021',
@@ -1533,7 +1573,7 @@ export const employeesData = [
       avatar,
   },
   {
-    EmployeeID: 4,
+    EmployeeID: generateRandomString(),
     Name: 'Penjani Inyene',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
@@ -1543,7 +1583,7 @@ export const employeesData = [
       avatar,
   },
   {
-    EmployeeID: 5,
+    EmployeeID: generateRandomString(),
     Name: 'Miron Vitold',
     Title: 'HR',
     HireDate: '01/02/2021',
@@ -1553,18 +1593,18 @@ export const employeesData = [
       avatar2,
   },
   {
-    EmployeeID: 1,
+    EmployeeID: generateRandomString(),
     Name: 'Nancy Davolio',
     Title: 'Sales Representative',
     HireDate: '01/02/2021',
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-    avatar2,
+      avatar2,
 
   },
   {
-    EmployeeID: 2,
+    EmployeeID: generateRandomString(),
     Name: 'Nasimiyu Danai',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
@@ -1574,7 +1614,7 @@ export const employeesData = [
       avatar3,
   },
   {
-    EmployeeID: 3,
+    EmployeeID: generateRandomString(),
     Name: 'Iulia Albu',
     Title: 'HR',
     HireDate: '01/02/2021',
@@ -1584,7 +1624,7 @@ export const employeesData = [
       avatar4,
   },
   {
-    EmployeeID: 4,
+    EmployeeID: generateRandomString(),
     Name: 'Siegbert Gottfried',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
@@ -1594,7 +1634,7 @@ export const employeesData = [
       avatar2,
   },
   {
-    EmployeeID: 5,
+    EmployeeID: generateRandomString(),
     Name: 'Omar Darobe',
     Title: 'HR',
     HireDate: '01/02/2021',
@@ -1604,7 +1644,7 @@ export const employeesData = [
       avatar,
   },
   {
-    EmployeeID: 4,
+    EmployeeID: generateRandomString(),
     Name: 'Penjani Inyene',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
@@ -1614,7 +1654,7 @@ export const employeesData = [
       avatar,
   },
   {
-    EmployeeID: 5,
+    EmployeeID: generateRandomString(),
     Name: 'Miron Vitold',
     Title: 'HR',
     HireDate: '01/02/2021',
@@ -1624,17 +1664,17 @@ export const employeesData = [
       avatar2,
   },
   {
-    EmployeeID: 1,
+    EmployeeID: generateRandomString(),
     Name: 'Nancy Davolio',
     Title: 'Sales Representative',
     HireDate: '01/02/2021',
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-    avatar,
+      avatar,
   },
   {
-    EmployeeID: 2,
+    EmployeeID: generateRandomString(),
     Name: 'Nasimiyu Danai',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
@@ -1644,7 +1684,7 @@ export const employeesData = [
       avatar3,
   },
   {
-    EmployeeID: 3,
+    EmployeeID: generateRandomString(),
     Name: 'Iulia Albu',
     Title: 'HR',
     HireDate: '01/02/2021',
@@ -1654,7 +1694,7 @@ export const employeesData = [
       avatar4,
   },
   {
-    EmployeeID: 4,
+    EmployeeID: generateRandomString(),
     Name: 'Siegbert Gottfried',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
@@ -1664,7 +1704,7 @@ export const employeesData = [
       avatar2,
   },
   {
-    EmployeeID: 5,
+    EmployeeID: generateRandomString(),
     Name: 'Omar Darobe',
     Title: 'HR',
     HireDate: '01/02/2021',
@@ -1674,7 +1714,7 @@ export const employeesData = [
       avatar,
   },
   {
-    EmployeeID: 4,
+    EmployeeID: generateRandomString(),
     Name: 'Penjani Inyene',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
@@ -1684,7 +1724,7 @@ export const employeesData = [
       avatar,
   },
   {
-    EmployeeID: 5,
+    EmployeeID: generateRandomString(),
     Name: 'Miron Vitold',
     Title: 'HR',
     HireDate: '01/02/2021',
@@ -1694,18 +1734,18 @@ export const employeesData = [
       avatar2,
   },
   {
-    EmployeeID: 1,
+    EmployeeID: generateRandomString(),
     Name: 'Nancy Davolio',
     Title: 'Sales Representative',
     HireDate: '01/02/2021',
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-    avatar2,
+      avatar2,
 
   },
   {
-    EmployeeID: 2,
+    EmployeeID: generateRandomString(),
     Name: 'Nasimiyu Danai',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
@@ -1715,7 +1755,7 @@ export const employeesData = [
       avatar3,
   },
   {
-    EmployeeID: 3,
+    EmployeeID: generateRandomString(),
     Name: 'Iulia Albu',
     Title: 'HR',
     HireDate: '01/02/2021',
@@ -1725,7 +1765,7 @@ export const employeesData = [
       avatar4,
   },
   {
-    EmployeeID: 4,
+    EmployeeID: generateRandomString(),
     Name: 'Siegbert Gottfried',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
@@ -1735,7 +1775,7 @@ export const employeesData = [
       avatar2,
   },
   {
-    EmployeeID: 5,
+    EmployeeID: generateRandomString(),
     Name: 'Omar Darobe',
     Title: 'HR',
     HireDate: '01/02/2021',
@@ -1745,7 +1785,7 @@ export const employeesData = [
       avatar,
   },
   {
-    EmployeeID: 4,
+    EmployeeID: generateRandomString(),
     Name: 'Penjani Inyene',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
@@ -1755,7 +1795,7 @@ export const employeesData = [
       avatar,
   },
   {
-    EmployeeID: 5,
+    EmployeeID: generateRandomString(),
     Name: 'Miron Vitold',
     Title: 'HR',
     HireDate: '01/02/2021',
@@ -1765,18 +1805,18 @@ export const employeesData = [
       avatar2,
   },
   {
-    EmployeeID: 1,
+    EmployeeID: generateRandomString(),
     Name: 'Nancy Davolio',
     Title: 'Sales Representative',
     HireDate: '01/02/2021',
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-    avatar2,
+      avatar2,
 
   },
   {
-    EmployeeID: 2,
+    EmployeeID: generateRandomString(),
     Name: 'Nasimiyu Danai',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
@@ -1786,7 +1826,7 @@ export const employeesData = [
       avatar3,
   },
   {
-    EmployeeID: 3,
+    EmployeeID: generateRandomString(),
     Name: 'Iulia Albu',
     Title: 'HR',
     HireDate: '01/02/2021',
@@ -1796,7 +1836,7 @@ export const employeesData = [
       avatar4,
   },
   {
-    EmployeeID: 4,
+    EmployeeID: generateRandomString(),
     Name: 'Siegbert Gottfried',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
@@ -1806,7 +1846,7 @@ export const employeesData = [
       avatar2,
   },
   {
-    EmployeeID: 5,
+    EmployeeID: generateRandomString(),
     Name: 'Omar Darobe',
     Title: 'HR',
     HireDate: '01/02/2021',
@@ -1816,7 +1856,7 @@ export const employeesData = [
       avatar,
   },
   {
-    EmployeeID: 4,
+    EmployeeID: generateRandomString(),
     Name: 'Penjani Inyene',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
@@ -1826,7 +1866,7 @@ export const employeesData = [
       avatar,
   },
   {
-    EmployeeID: 5,
+    EmployeeID: generateRandomString(),
     Name: 'Miron Vitold',
     Title: 'HR',
     HireDate: '01/02/2021',
@@ -1836,18 +1876,18 @@ export const employeesData = [
       avatar2,
   },
   {
-    EmployeeID: 1,
+    EmployeeID: generateRandomString(),
     Name: 'Nancy Davolio',
     Title: 'Sales Representative',
     HireDate: '01/02/2021',
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-    avatar2,
+      avatar2,
 
   },
   {
-    EmployeeID: 2,
+    EmployeeID: generateRandomString(),
     Name: 'Nasimiyu Danai',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
@@ -1857,7 +1897,7 @@ export const employeesData = [
       avatar3,
   },
   {
-    EmployeeID: 3,
+    EmployeeID: generateRandomString(),
     Name: 'Iulia Albu',
     Title: 'HR',
     HireDate: '01/02/2021',
@@ -1867,7 +1907,7 @@ export const employeesData = [
       avatar4,
   },
   {
-    EmployeeID: 4,
+    EmployeeID: generateRandomString(),
     Name: 'Siegbert Gottfried',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
@@ -1877,7 +1917,7 @@ export const employeesData = [
       avatar2,
   },
   {
-    EmployeeID: 5,
+    EmployeeID: generateRandomString(),
     Name: 'Omar Darobe',
     Title: 'HR',
     HireDate: '01/02/2021',
@@ -1887,7 +1927,7 @@ export const employeesData = [
       avatar,
   },
   {
-    EmployeeID: 4,
+    EmployeeID: generateRandomString(),
     Name: 'Penjani Inyene',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
@@ -1897,7 +1937,7 @@ export const employeesData = [
       avatar,
   },
   {
-    EmployeeID: 5,
+    EmployeeID: generateRandomString(),
     Name: 'Miron Vitold',
     Title: 'HR',
     HireDate: '01/02/2021',
@@ -1907,18 +1947,18 @@ export const employeesData = [
       avatar2,
   },
   {
-    EmployeeID: 1,
+    EmployeeID: generateRandomString(),
     Name: 'Nancy Davolio',
     Title: 'Sales Representative',
     HireDate: '01/02/2021',
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-    avatar2,
+      avatar2,
 
   },
   {
-    EmployeeID: 2,
+    EmployeeID: generateRandomString(),
     Name: 'Nasimiyu Danai',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
@@ -1928,7 +1968,7 @@ export const employeesData = [
       avatar3,
   },
   {
-    EmployeeID: 3,
+    EmployeeID: generateRandomString(),
     Name: 'Iulia Albu',
     Title: 'HR',
     HireDate: '01/02/2021',
@@ -1938,7 +1978,7 @@ export const employeesData = [
       avatar4,
   },
   {
-    EmployeeID: 4,
+    EmployeeID: generateRandomString(),
     Name: 'Siegbert Gottfried',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
@@ -1948,7 +1988,7 @@ export const employeesData = [
       avatar2,
   },
   {
-    EmployeeID: 5,
+    EmployeeID: generateRandomString(),
     Name: 'Omar Darobe',
     Title: 'HR',
     HireDate: '01/02/2021',
@@ -1958,7 +1998,7 @@ export const employeesData = [
       avatar,
   },
   {
-    EmployeeID: 4,
+    EmployeeID: generateRandomString(),
     Name: 'Penjani Inyene',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
@@ -1968,7 +2008,7 @@ export const employeesData = [
       avatar,
   },
   {
-    EmployeeID: 5,
+    EmployeeID: generateRandomString(),
     Name: 'Miron Vitold',
     Title: 'HR',
     HireDate: '01/02/2021',
@@ -1978,18 +2018,18 @@ export const employeesData = [
       avatar2,
   },
   {
-    EmployeeID: 1,
+    EmployeeID: generateRandomString(),
     Name: 'Nancy Davolio',
     Title: 'Sales Representative',
     HireDate: '01/02/2021',
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-    avatar2,
+      avatar2,
 
   },
   {
-    EmployeeID: 2,
+    EmployeeID: generateRandomString(),
     Name: 'Nasimiyu Danai',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
@@ -1999,7 +2039,7 @@ export const employeesData = [
       avatar3,
   },
   {
-    EmployeeID: 3,
+    EmployeeID: generateRandomString(),
     Name: 'Iulia Albu',
     Title: 'HR',
     HireDate: '01/02/2021',
@@ -2009,7 +2049,7 @@ export const employeesData = [
       avatar4,
   },
   {
-    EmployeeID: 4,
+    EmployeeID: generateRandomString(),
     Name: 'Siegbert Gottfried',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
@@ -2019,7 +2059,7 @@ export const employeesData = [
       avatar2,
   },
   {
-    EmployeeID: 5,
+    EmployeeID: generateRandomString(),
     Name: 'Omar Darobe',
     Title: 'HR',
     HireDate: '01/02/2021',
@@ -2029,7 +2069,7 @@ export const employeesData = [
       avatar,
   },
   {
-    EmployeeID: 4,
+    EmployeeID: generateRandomString(),
     Name: 'Penjani Inyene',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
@@ -2039,7 +2079,7 @@ export const employeesData = [
       avatar,
   },
   {
-    EmployeeID: 5,
+    EmployeeID: generateRandomString(),
     Name: 'Miron Vitold',
     Title: 'HR',
     HireDate: '01/02/2021',
@@ -2049,18 +2089,18 @@ export const employeesData = [
       avatar2,
   },
   {
-    EmployeeID: 1,
+    EmployeeID: generateRandomString(),
     Name: 'Nancy Davolio',
     Title: 'Sales Representative',
     HireDate: '01/02/2021',
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-    avatar2,
+      avatar2,
 
   },
   {
-    EmployeeID: 2,
+    EmployeeID: generateRandomString(),
     Name: 'Nasimiyu Danai',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
@@ -2070,7 +2110,7 @@ export const employeesData = [
       avatar3,
   },
   {
-    EmployeeID: 3,
+    EmployeeID: generateRandomString(),
     Name: 'Iulia Albu',
     Title: 'HR',
     HireDate: '01/02/2021',
@@ -2080,7 +2120,7 @@ export const employeesData = [
       avatar4,
   },
   {
-    EmployeeID: 4,
+    EmployeeID: generateRandomString(),
     Name: 'Siegbert Gottfried',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
@@ -2090,7 +2130,7 @@ export const employeesData = [
       avatar2,
   },
   {
-    EmployeeID: 5,
+    EmployeeID: generateRandomString(),
     Name: 'Omar Darobe',
     Title: 'HR',
     HireDate: '01/02/2021',
@@ -2100,7 +2140,7 @@ export const employeesData = [
       avatar,
   },
   {
-    EmployeeID: 4,
+    EmployeeID: generateRandomString(),
     Name: 'Penjani Inyene',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
@@ -2110,7 +2150,7 @@ export const employeesData = [
       avatar,
   },
   {
-    EmployeeID: 5,
+    EmployeeID: generateRandomString(),
     Name: 'Miron Vitold',
     Title: 'HR',
     HireDate: '01/02/2021',
@@ -2176,7 +2216,7 @@ export const ordersData = [
     Status: 'rejected',
     StatusBg: 'red',
     ProductImage:
-    product1,
+      product1,
   },
   {
     OrderID: 94757,
@@ -3092,29 +3132,35 @@ export const SparklineAreaData = [
 ];
 
 export const lineCustomSeries = [
-  { dataSource: lineChartData[0],
+  {
+    dataSource: lineChartData[0],
     xName: 'x',
     yName: 'y',
     name: 'Germany',
     width: '2',
     marker: { visible: true, width: 10, height: 10 },
-    type: 'Line' },
+    type: 'Line'
+  },
 
-  { dataSource: lineChartData[1],
+  {
+    dataSource: lineChartData[1],
     xName: 'x',
     yName: 'y',
     name: 'England',
     width: '2',
     marker: { visible: true, width: 10, height: 10 },
-    type: 'Line' },
+    type: 'Line'
+  },
 
-  { dataSource: lineChartData[2],
+  {
+    dataSource: lineChartData[2],
     xName: 'x',
     yName: 'y',
     name: 'India',
     width: '2',
     marker: { visible: true, width: 10, height: 10 },
-    type: 'Line' },
+    type: 'Line'
+  },
 
 ];
 
@@ -3177,7 +3223,8 @@ export const stackedChartData = [
 
 export const stackedCustomSeries = [
 
-  { dataSource: stackedChartData[0],
+  {
+    dataSource: stackedChartData[0],
     xName: 'x',
     yName: 'y',
     name: 'Budget',
@@ -3186,7 +3233,8 @@ export const stackedCustomSeries = [
 
   },
 
-  { dataSource: stackedChartData[1],
+  {
+    dataSource: stackedChartData[1],
     xName: 'x',
     yName: 'y',
     name: 'Expense',
