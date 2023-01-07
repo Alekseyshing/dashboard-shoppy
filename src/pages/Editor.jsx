@@ -2,7 +2,6 @@ import React from 'react'
 import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor'
 import { Header } from '../components'
 import { EditorData } from '../data/dummy'
-import { generateRandomString } from '../utils/generateRandomString'
 
 
 const Editor = () => {
